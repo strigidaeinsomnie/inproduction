@@ -88,8 +88,8 @@ char* Word[]=
 
 char* point[]=
 {
-  "、",
-  "。"
+  "",
+  "\r"
 };
 
 void setup()
@@ -105,7 +105,7 @@ void loop()
   Serial.print("\r");
 
   Letter = Word[random(words)];
-  Letter += point[random(2)];
+  Letter += rtrn[random(2)];
   Serial.print(Letter);
 
   Serial.print("\r");
