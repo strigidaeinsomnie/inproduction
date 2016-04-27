@@ -86,7 +86,7 @@ char* Word[]=
   "あの"
 };
 
-char* point[]=
+char* rtrn[]=
 {
   "",
   "\r"
