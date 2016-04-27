@@ -100,7 +100,7 @@ void setup()
 
 void loop()
 {
-  Serial.write(rev, 3);
+//  Serial.write(rev, 3);
 
   Serial.print("\r");
 
