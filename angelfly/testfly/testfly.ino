@@ -102,13 +102,13 @@ void loop()
 {
   Serial.write(rev, 3);
 
-  Serial.print("\r\r\r");
+  Serial.print("\r");
 
   Letter = Word[random(words)];
   Letter += point[random(2)];
   Serial.print(Letter);
 
-  Serial.print("\r\r\r");
+  Serial.print("\r");
 
   delay(10000);  // 10sec
 }
