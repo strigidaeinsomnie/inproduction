@@ -3,8 +3,8 @@
 byte Can1[] = {
   0x18};
 
-byte rev[] = {
-  0x1B, 0x49, 0x31};
+// byte rev[] = {
+//   0x1B, 0x49, 0x31};
 
 String Letter = "";
 
