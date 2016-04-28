@@ -89,6 +89,7 @@ char* Word[]=
 char* rtrn[]=
 {
   "",
+  "",
   "\r"
 };
 
@@ -105,10 +106,10 @@ void loop()
   Serial.print("\r");
 
   Letter = Word[random(words)];
-  Letter += rtrn[random(2)];
+  Letter += rtrn[random(3)];
   Serial.print(Letter);
 
   Serial.print("\r");
 
-  delay(10000);  // 10sec
+  delay(1000);  // 1sec
 }
