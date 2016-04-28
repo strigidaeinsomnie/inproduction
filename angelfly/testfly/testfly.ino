@@ -97,7 +97,7 @@ void setup()
 {
   Serial.begin(9600);
   Serial.write(Can1, 1);
-  randomSeed(analogRead(1));
+  randomSeed(analogRead(0));
 }
 
 void loop()
