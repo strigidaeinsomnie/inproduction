@@ -1,0 +1,8 @@
+FROM ubuntu:15.10
+
+MAINTAINER strigidaeinsomnie
+
+RUN apt-get update -y && \
+    apt-get upgrade -y && \
+    apt-get install -y python git && \
+    git clone git://github.com/strigidaeinsomnie/inproduction.git
