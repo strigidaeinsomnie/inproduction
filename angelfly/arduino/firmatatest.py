@@ -6,6 +6,6 @@ arduino.delay(2)
 
 while True:
     arduino.digital_write(13,firmata.HIGH)
-    arduino.delay(1)
+    arduino.delay(3)
     arduino.digital_write(13,firmata.LOW)
-    arduino.delay(1)
+    arduino.delay(3)

@@ -4,5 +4,7 @@ MAINTAINER strigidaeinsomnie
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
-    apt-get install -y python git && \
+    apt-get install -y python python-setuptools python-pip \
+    git && \
+    pip install github3.py && \
     git clone git://github.com/strigidaeinsomnie/inproduction.git
