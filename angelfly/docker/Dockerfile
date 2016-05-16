@@ -11,4 +11,4 @@ RUN apt-get update && \
 
     python3.5 -m pip install BeautifulSoup4 lxml && \
 
-    git clone git://github.com/strigidaeinsomnie/inproduction/angelfly.git
+    git clone git://github.com/strigidaeinsomnie/inproduction.git
