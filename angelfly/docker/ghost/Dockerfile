@@ -9,7 +9,8 @@ RUN apt-get update && \
     libxml2-dev libxslt1-dev zlib1g-dev && \
 
     git clone git://git.drogon.net/wiringPi && \
-    cd wiringPi && ./build
+    cd wiringPi && \
+    ./build && \
     python3.4 -m pip install wiringpi2 \
 
     pyserial RPi.GPIO \
