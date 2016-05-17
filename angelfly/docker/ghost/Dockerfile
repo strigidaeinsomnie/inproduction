@@ -10,9 +10,9 @@ RUN apt-get update && \
 
     git clone git://git.drogon.net/wiringPi && \
     cd wiringPi && \
-    ./build && \
-    python3.4 -m pip install wiringpi2 \
+    ./build
 
+RUN python3.4 -m pip install wiringpi2 \
     pyserial RPi.GPIO \
     BeautifulSoup4 lxml && \
 
