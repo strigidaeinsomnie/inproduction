@@ -1,9 +1,8 @@
 FROM ubuntu:15.10
 
-MAINTAINER strigidaeinsomnie
+MAINTAINER Strigidaeinsomnie
 
 RUN apt-get update && \
-    apt-get upgrade -y && \
 
     apt-get install -y python3.5-dev python3-pip \
     libxml2-dev libxslt1-dev zlib1g-dev \
