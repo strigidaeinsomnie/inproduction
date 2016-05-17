@@ -6,13 +6,13 @@ RUN apt-get update && \
     apt-get install -y build-essential gcc git \
 
     python3 python3-dev python3-pip \
-    libxml2-dev libxslt1-dev zlib1g-dev
+    libxml2-dev libxslt1-dev zlib1g-dev && \
 
-RUN git clone git://git.drogon.net/wiringPi && \
+    git clone git://git.drogon.net/wiringPi && \
     cd wiringPi && \
-    ./build
+    ./build && \
 
-RUN python3.4 -m pip install wiringpi2 \
+    python3.4 -m pip install wiringpi2 \
     pyserial RPi.GPIO \
     BeautifulSoup4 lxml && \
 
