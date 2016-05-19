@@ -12,7 +12,7 @@ RUN apt-get update && \
     cd wiringPi && \
     ./build && \
 
-    python3.4 -m pip install wiringpi2 \
+    pip install wiringpi2 \
     pyserial RPi.GPIO \
     BeautifulSoup4 lxml && \
 
