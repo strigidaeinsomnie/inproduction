@@ -9,6 +9,7 @@ from findsentence import findsentence
 from dustshoot import dustshoot
 from lamemoire import lamemoire
 import re
+import serial
 
 #-------------------------------------------------------
 
@@ -31,7 +32,11 @@ xhtmlrear = '"'
 xhtml = None
 sentence = None
 
+ser = serial.Serial(port = '/dev/tyyAMA0', baudrate = 9600)
+ser.open()
+
 #-------------------------------------------------------
+
 while sentence == None :
     linklistinitial = linklist(mother, keyinitial)
     linkinitial = choicelink(mother, linklistinitial, initialfront, initialrear)
@@ -59,8 +64,6 @@ while sentence == None :
 else :
     word = lamemoire(sentence)
 
+print >> ser, word
 
-f = open('lamourvole.txt', 'a')
-f.write(word)
-f.close()
 #-------------------------------------------------------
