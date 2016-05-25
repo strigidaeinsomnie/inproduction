@@ -64,6 +64,6 @@ while sentence == None :
 else :
     word = lamemoire(sentence)
 
-print >> ser, word
+print >> ser, wor
 
 #-------------------------------------------------------
