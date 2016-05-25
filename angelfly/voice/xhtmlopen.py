@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
-import urllib.request
+import urllib2.request
 
 def xhtmlopen(arg1, arg2, arg3) :
-    html = urllib.request.urlopen(arg1)
+    html = urllib2.request.urlopen(arg1)
     soup = BeautifulSoup(html, 'lxml')
     return soup.find(arg2,{arg3})
