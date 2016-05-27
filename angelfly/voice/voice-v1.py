@@ -1,13 +1,13 @@
 #-------------------------------------------------------
 
-from linklist import linklist
-from choicelink import choicelink
-from fathermake import fathermake
-from xhtmlopen import xhtmlopen
-from washxhtml import washxhtml
-from findsentence import findsentence
-from dustshoot import dustshoot
-from lamemoire import lamemoire
+from linklist import *
+from choicelink import *
+from fathermake import *
+from xhtmlopen import *
+from washxhtml import *
+from findsentence import *
+from dustshoot import *
+from lamemoire import *
 import re
 import serial
 
@@ -64,6 +64,6 @@ while sentence == None :
 else :
     word = lamemoire(sentence)
 
-print >> ser, wor
+print >> ser, word
 
 #-------------------------------------------------------
