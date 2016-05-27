@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get install -y build-essential gcc git \
 
 #for python
-    python python-dev python-pip \
+    python3 python3-dev python3-pip \
     libxml2-dev libxslt1-dev zlib1g-dev && \
 
 #install wiringPi
@@ -31,7 +31,7 @@ RUN apt-get update && \
     make install && \
 
 #pip
-    pip install wiringpi2 \
+    pip3 install wiringpi2 \
     pyserial RPi.GPIO \
     nltk BeautifulSoup4 lxml \
     mecab-python3 && \
