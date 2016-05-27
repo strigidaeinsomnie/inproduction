@@ -38,4 +38,5 @@ RUN apt-get update && \
 
 
 #import files
+    cd ~/ && \
     git clone git://github.com/strigidaeinsomnie/inproduction.git
