@@ -32,8 +32,7 @@ xhtmlrear = '"'
 xhtml = None
 sentence = None
 
-ser = serial.Serial(port = '/dev/tyyAMA0', baudrate = 9600)
-ser.open()
+ser = serial.Serial(port = '/dev/ttyAMA0', baudrate = 9600)
 
 #-------------------------------------------------------
 
