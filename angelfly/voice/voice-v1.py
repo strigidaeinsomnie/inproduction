@@ -66,7 +66,6 @@ else :
 
 ser.write(clear.encode())
 ser.write(word.encode())
-ser.write(clear.encode())
 print(word)
-
+word
 #-------------------------------------------------------
