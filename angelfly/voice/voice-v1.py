@@ -66,7 +66,9 @@ else :
     clear = '\r\r\r'
 
 ser.write(clear.encode())
-ser.write(word.encode())
+ser.write(words.encode())
+ser.write(clear.encode())
+
 print(word)
 print(word.encode())
 print(words.encode())
