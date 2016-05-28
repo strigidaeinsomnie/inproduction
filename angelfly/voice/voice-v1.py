@@ -62,8 +62,8 @@ while sentence == None :
 
 else :
     word = lamemoire(sentence)
-    words = word + '\r'
-    wordprint = word.encode()
+    words = word + r'\r'
+    wordprint = words.encode()
 
 ser.write(wordprint)
 
