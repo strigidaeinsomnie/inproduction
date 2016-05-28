@@ -33,6 +33,7 @@ xhtml = None
 sentence = None
 
 ser = serial.Serial(port = '/dev/ttyAMA0', baudrate = 9600)
+clear = '\r\r'
 
 #-------------------------------------------------------
 
@@ -62,14 +63,11 @@ while sentence == None :
 
 else :
     word = lamemoire(sentence)
-    words = word[:-2]
-    clear = '\r\r\r'
 
 ser.write(clear.encode())
-ser.write(words.encode())
+ser.write(word.encode())
 ser.write(clear.encode())
 
 print(word)
-print(word.encode())
-print(words.encode())
+
 #-------------------------------------------------------
