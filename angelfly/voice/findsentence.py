@@ -5,7 +5,6 @@ def findsentence(arg1) :
 
     if arg1 == None :
         return None
-        break
 
     else :
         sentence = random.choice(arg1)
