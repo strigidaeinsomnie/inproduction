@@ -29,6 +29,11 @@ titlerear = '"'
 xhtmlfront = '/'
 xhtmlrear = '"'
 
+linklists = None
+links = None
+linktitle = None
+linklistxhtml = None
+linkxhtml = None
 xhtml = None
 sentence = None
 word = None
@@ -41,11 +46,11 @@ clear = '\r\r'
 while word == None :
 
     while sentence == None :
-        linklistinitial = linklist(mother, keyinitial)
-        linkinitial = choicelink(mother, linklistinitial, initialfront, initialrear)
+        linklists = linklist(mother, keyinitial)
+        links = choicelink(mother, linklists, initialfront, initialrear)
 
-        linklisttitle = linklist(linkinitial, keytitle)
-        linktitle = choicelink(mother, linklisttitle, titlefront, titlerear)
+        linklists = linklist(links, keytitle)
+        linktitle = choicelink(mother, linklists, titlefront, titlerear)
 
         father = fathermake(linktitle, fatherfront, fatherrear)
 
