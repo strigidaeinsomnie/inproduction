@@ -85,7 +85,16 @@ while intime <= 10 :
 
         print(word)
 
+        linklists = None
+        links = None
+        linktitle = None
+        linklistxhtml = None
+        linkxhtml = None
+        xhtml = None
+        sentence = None
+        word = None
+        
     time.sleep(5)
     intime += 1
-    
+
 #-------------------------------------------------------
