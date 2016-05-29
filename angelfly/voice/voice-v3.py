@@ -43,9 +43,11 @@ word = None
 ser = serial.Serial(port = '/dev/ttyAMA0', baudrate = 9600)
 clear = '\r\r'
 
+intime = 0
+
 #-------------------------------------------------------
 
-while :
+while intime <= 10 :
 
     while word == None :
 
@@ -84,4 +86,6 @@ while :
         print(word)
 
     time.sleep(5)
+    intime += 1
+    
 #-------------------------------------------------------
