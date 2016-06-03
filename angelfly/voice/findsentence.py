@@ -7,5 +7,10 @@ def findsentence(arg1) :
         return None
 
     else :
-        sentence = random.choice(arg1)
-        return sentence
+        try :
+            sentence = random.choice(arg1)
+            return sentence
+            break
+
+        except IndexError :
+            return None
