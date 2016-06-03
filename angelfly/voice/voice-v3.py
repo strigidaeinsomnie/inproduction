@@ -40,7 +40,7 @@ xhtml = None
 sentence = None
 word = None
 
-ser = serial.Serial(port = '/dev/ttyAMA0', baudrate = 9600)
+ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
 clear = '\r\r'
 
 intime = 0
@@ -93,7 +93,7 @@ while intime <= 10 :
         xhtml = None
         sentence = None
         word = None
-        
+
     time.sleep(5)
     intime += 1
 
