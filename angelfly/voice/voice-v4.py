@@ -51,7 +51,7 @@ while intime <= 10 :
 
     while word == None :
 
-        while sentence == None :
+        while sentence == None && father == None :
             linklists = linklist(mother, keyinitial)
             links = choicelink(mother, linklists, initialfront, initialrear)
 
