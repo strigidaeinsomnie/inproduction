@@ -13,7 +13,6 @@ def choicelink(arg1, arg2, arg3, arg4) :
             rear = prelink.rfind(arg4)
             slicedlink = prelink[front:rear]
             return arg1 + slicedlink
-            break
 
         except IndexError :
             return None

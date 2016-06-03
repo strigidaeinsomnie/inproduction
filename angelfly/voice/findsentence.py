@@ -10,7 +10,6 @@ def findsentence(arg1) :
         try :
             sentence = random.choice(arg1)
             return sentence
-            break
 
         except IndexError :
             return None
