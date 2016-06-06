@@ -30,7 +30,7 @@ ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
 #----------------------------------
 
 html1 = urllib.request.urlopen(mother)
-soup1 = BeautifulSoup(html, 'lxml')
+soup1 = BeautifulSoup(html1, 'lxml')
 linklists1 = soup.find_all(href=re.compile(keyinitial))
 
 prelink1 = str(random.choice(linklists1))
@@ -42,7 +42,7 @@ links1 = mother + slicedlink1
 print (links1)
 
 html2 = urllib.request.urlopen(links)
-soup2 = BeautifulSoup(html, 'lxml')
+soup2 = BeautifulSoup(html2, 'lxml')
 linklists2 = soup.find_all(href=re.compile(keytitle))
 
 prelink2 = str(random.choice(linklists2))
