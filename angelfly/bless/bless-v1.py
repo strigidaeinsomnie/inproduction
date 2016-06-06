@@ -59,8 +59,6 @@ father = links2[fatfront:fatrear]
 
 print(father) #--リンクをたどる
 
-#--------ここまでは失敗することないよ
-
 html3 = urllib.request.urlopen(links2)
 soup3 = BeautifulSoup(html3, 'lxml')
 linklists3 = soup3.find_all(href=re.compile(keyxhtml))
@@ -71,6 +69,6 @@ rear3 = prelink3.rfind(xhtmlrear)
 slicedlink3 = prelink3[front3:rear3]
 linkxhtml = father + slicedlink3
 
-print(linkxhtml)
+print(linkxhtml) #--ファイルにたどり着いた
 
-#----------------------------------
+#-------------ここまでは失敗することないよ
