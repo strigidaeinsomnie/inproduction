@@ -52,3 +52,11 @@ slicedlink2 = prelink2[front2:rear2]
 links2 = mother + slicedlink2
 
 print (links2)
+
+#--------ここまでは失敗することないよ
+
+front3 = links2.find(fatherfront)
+rear3 = links2.rfind(fatherrear)
+links3 = links2[front3:rear3]
+
+print(links3)
