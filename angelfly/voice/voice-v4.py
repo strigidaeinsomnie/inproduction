@@ -61,7 +61,10 @@ while intime <= 10 :
             linktitle = choicelink(mother, linklists, titlefront, titlerear)
 
             father = fathermake(linktitle, fatherfront, fatherrear)
-            
+
+            if father == None :
+                continue
+                
             linklistxhtml = linklist(linktitle, keyxhtml)
 
 
