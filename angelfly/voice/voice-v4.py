@@ -67,13 +67,19 @@ while intime <= 10 :
 
             linklistxhtml = linklist(linktitle, keyxhtml)
 
+            count1 += 1
+
+            if count1 >= 5 :
+                count1 = 0
+                continue
 
             while xhtml == None:
                 count += 1
-                if count == 10
-                    count = 0
+
+                if count2 >= 5 :
+                    count2 = 0
                     continue
-                    
+
                 linkxhtml = choicelink(father, linklistxhtml, xhtmlfront, xhtmlrear)
 
                 xhtml = xhtmlopen(linkxhtml, keyxhtmlclass1, keyxhtmlclass2)
@@ -109,5 +115,8 @@ while intime <= 10 :
 
     time.sleep(10)
     intime += 1
+
+    count1 = 0
+    count2 = 0
 
 #-------------------------------------------------------
