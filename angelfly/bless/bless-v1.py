@@ -55,9 +55,9 @@ print (links2) #--作品選ぶ
 
 fatfront = links2.find(fatherfront)
 fatrear = links2.rfind(fatherrear)
-links3 = links2[fatfront:fatrear]
+father = links2[fatfront:fatrear]
 
-print(links3) #--リンクをたどる
+print(father) #--リンクをたどる
 
 #--------ここまでは失敗することないよ
 
@@ -65,7 +65,7 @@ html3 = urllib.request.urlopen(links2)
 soup3 = BeautifulSoup(html3, 'lxml')
 linklists3 = soup3.find_all(href=re.compile(keyxhtml))
 
-prelink3 = str(random.choice(links3))
+prelink3 = str(random.choice(linklists3))
 front3 = prelink3.find(xhtmlfront) + 1
 rear3 = prelink3.rfind(xhtmlrear)
 slicedlink3 = prelink3[front3:rear3]
