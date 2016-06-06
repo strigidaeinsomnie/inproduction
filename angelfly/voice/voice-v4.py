@@ -8,6 +8,8 @@ from washxhtml import *
 from findsentence import *
 from dustshoot import *
 from lamemoire import *
+from findnum import *
+from printnum import *
 
 import time
 import re
