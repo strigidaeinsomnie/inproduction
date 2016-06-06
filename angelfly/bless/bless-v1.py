@@ -71,4 +71,7 @@ linkxhtml = father + slicedlink3
 
 print(linkxhtml) #--ファイルにたどり着いた
 
+html4 = urllib.request.urlopen(linkxhtml)
+soup4 = BeautifulSoup(html4, 'lxml')
+linklists4 = soup4.find(keyxhtmlclass1, {keyxhtmlclass2})
 #-------------ここまでは失敗することないよ
