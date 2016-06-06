@@ -39,7 +39,7 @@ rear1 = prelink1.rfind(initialrear)
 slicedlink1 = prelink1[front1:rear1]
 links1 = mother + slicedlink1
 
-print (links1)
+print (links1) #--あいうえお選ぶ
 
 html2 = urllib.request.urlopen(links1)
 soup2 = BeautifulSoup(html2, 'lxml')
@@ -51,12 +51,24 @@ rear2 = prelink2.rfind(titlerear)
 slicedlink2 = prelink2[front2:rear2]
 links2 = mother + slicedlink2
 
-print (links2)
+print (links2) #--作品選ぶ
+
+fatfront = links2.find(fatherfront)
+fatrear = links2.rfind(fatherrear)
+links3 = links2[fatfront:fatrear]
+
+print(links3) #--リンクをたどる
 
 #--------ここまでは失敗することないよ
 
-front3 = links2.find(fatherfront)
-rear3 = links2.rfind(fatherrear)
-links3 = links2[front3:rear3]
+html3 = urllib.request.urlopen(links2)
+soup3 = BeautifulSoup(html3, 'lxml')
+linklists3 = soup3.find_all(href=re.compile(keyxhtml))
 
-print(links3)
+prelink3 = str(random.choice(links3))
+front3 = prelink3.find(xhtmlfront) + 1
+rear3 = prelink3.rfind(xhtmlrear)
+slicedlink3 = prelink3[front3:rear3]
+linkxhtml = father + slicedlink3
+
+print(linkxhtml)
