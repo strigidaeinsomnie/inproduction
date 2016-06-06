@@ -46,6 +46,8 @@ ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
 clear = '\r\r'
 
 intime = 0
+count1 = 0
+count2 = 0
 
 #-------------------------------------------------------
 
