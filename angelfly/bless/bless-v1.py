@@ -41,7 +41,7 @@ links1 = mother + slicedlink1
 
 print (links1)
 
-html2 = urllib.request.urlopen(links)
+html2 = urllib.request.urlopen(links1)
 soup2 = BeautifulSoup(html2, 'lxml')
 linklists2 = soup2.find_all(href=re.compile(keytitle))
 
