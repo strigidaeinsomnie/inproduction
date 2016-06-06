@@ -4,7 +4,7 @@ def choicelink(arg1, arg2, arg3, arg4) :
     print(arg2)
 
     if arg2 == None :
-        return None
+        continue
 
     else :
         try :
@@ -15,4 +15,4 @@ def choicelink(arg1, arg2, arg3, arg4) :
             return arg1 + slicedlink
 
         except IndexError :
-            return None
+            continue

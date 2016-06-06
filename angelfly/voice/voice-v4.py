@@ -84,7 +84,6 @@ while intime <= 10 :
         listnums = findnum(word)
         printnum(listnums, ser)
 
-
         ser.write(clear.encode())
         ser.write(word.encode())
         ser.write(clear.encode())
