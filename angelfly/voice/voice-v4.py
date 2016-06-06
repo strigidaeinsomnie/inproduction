@@ -76,7 +76,7 @@ while intime <= 10 :
                 continue
 
             while xhtml == None:
-                count += 1
+                count2 += 1
 
                 if count2 >= 5 :
                     count2 = 0
