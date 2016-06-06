@@ -73,11 +73,11 @@ print(linkxhtml) #--ファイルにたどり着いた
 
 html4 = urllib.request.urlopen(linkxhtml)
 soup4 = BeautifulSoup(html4, 'lxml')
-xhtml = soup4.find(keyxhtmlclass1, {keyxhtmlclass2})
+xhtml = soup4.find(keyxhtmlclass1,{keyxhtmlclass2})
 
 print(xhtml) #--本文を見つけた
 
-prewash = BeautifulSoup(str(xhtml, 'lxml'))
+prewash = BeautifulSoup(str(xhtml), 'lxml')
 washed = prewash.get_text()
 
 print(washed)
