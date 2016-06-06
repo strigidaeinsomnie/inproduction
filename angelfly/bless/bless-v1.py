@@ -69,7 +69,7 @@ rear3 = prelink3.rfind(xhtmlrear)
 slicedlink3 = prelink3[front3:rear3]
 linkxhtml = father + slicedlink3
 
-print(linkxhtml) #--ファイルにたどり着いた
+print(linkxhtml) #--ファイルにたどり着いた　zipの時がある
 
 html4 = urllib.request.urlopen(linkxhtml)
 soup4 = BeautifulSoup(html4, 'lxml')
