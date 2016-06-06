@@ -64,11 +64,16 @@ while intime <= 10 :
 
             if father == None :
                 continue
-                
+
             linklistxhtml = linklist(linktitle, keyxhtml)
 
 
             while xhtml == None:
+                count += 1
+                if count == 10
+                    count = 0
+                    continue
+                    
                 linkxhtml = choicelink(father, linklistxhtml, xhtmlfront, xhtmlrear)
 
                 xhtml = xhtmlopen(linkxhtml, keyxhtmlclass1, keyxhtmlclass2)
@@ -102,7 +107,7 @@ while intime <= 10 :
         sentence = None
         word = None
 
-    time.sleep(5)
+    time.sleep(10)
     intime += 1
 
 #-------------------------------------------------------
