@@ -142,7 +142,7 @@ while sw1 <= 100 :
 
     for printnum in listnums :
         forprint = str(printnum) + '\r'
-        ser.write(forprint.encode())
+        print(forprint)
 
     ser.write(sentence.encode())
     ser.write(clear.encode())
