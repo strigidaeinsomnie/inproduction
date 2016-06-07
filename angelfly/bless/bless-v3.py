@@ -111,10 +111,10 @@ while sw1 <= 100 :
 
     print(text) #--ルビをとってかぎ括弧さがす
 
-#    try :
-    sentence = random.choice(text)
-#    except IndexError :
-#        continue
+    try :
+        sentence = random.choice(text)
+    except IndexError :
+        continue
 
     print(sentence)
 
