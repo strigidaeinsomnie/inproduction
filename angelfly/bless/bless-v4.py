@@ -25,6 +25,9 @@ titlerear = '"'
 xhtmlfront = '/'
 xhtmlrear = '"'
 
+pattern1 = re.compile(b'.')
+pattern2 = re.compile('[0-9]')
+
 ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
 clear = '\r\r'
 
