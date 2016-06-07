@@ -113,8 +113,8 @@ while sw1 <= 100 :
 
     try :
         sentence = radom.choice(text)
-    except IndexError :
-        continue
+#    except IndexError :
+#        continue
 
     print(sentence)
 
