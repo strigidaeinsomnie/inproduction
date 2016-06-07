@@ -27,11 +27,11 @@ xhtmlrear = '"'
 
 ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
 
-sw1 = 1
+sw1 = 0
 
 #----------------------------------
 
-while sw1 == 1 :
+while sw1 <= 5 :
     html1 = urllib.request.urlopen(mother)
     soup1 = BeautifulSoup(html1, 'lxml')
     linklists1 = soup1.find_all(href=re.compile(keyinitial))
@@ -76,11 +76,11 @@ while sw1 == 1 :
 
     html4 = urllib.request.urlopen(linkxhtml)
     soup4 = BeautifulSoup(html4, 'lxml')
-    xhtml = soup4.find(keyxhtmlclass1,{keyxhtmlclass2})
+    xhtml = soup4.find(keyxhtmlclass1, {keyxhtmlclass2})
 
     print(xhtml) #--本文を見つけた
 
-    if xhtml == None :
+    if xhtml == None : #--zipのときはやりなおし
         continue
 
     prewash = BeautifulSoup(str(xhtml), 'lxml')
@@ -90,4 +90,4 @@ while sw1 == 1 :
 
     #-------------ここまでは失敗することないよ
 
-    sw1 = 0
+    sw1 += 0
