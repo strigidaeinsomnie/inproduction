@@ -31,7 +31,7 @@ sw1 = 0
 
 #----------------------------------
 
-while sw1 <= 5 :
+while sw1 <= 100 :
     xhtml = None
 
     html1 = urllib.request.urlopen(mother)
