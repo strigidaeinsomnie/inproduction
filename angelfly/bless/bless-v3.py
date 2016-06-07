@@ -111,6 +111,15 @@ while sw1 <= 100 :
 
     print(text) #--ルビをとってかぎ括弧さがす
 
+    try :
+        sentence = radom.choice(text)
+    except IndexError :
+        continue
+
+    print(sentence)
+
+
+
 
     #------------------------------
 
