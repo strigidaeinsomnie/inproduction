@@ -38,8 +38,7 @@ while sw1 <= 5 :
 
     try :
         prelink1 = str(random.choice(linklists1))
-
-    except ValueError :
+    except IndexError :
         pass
 
     front1 = prelink1.find(initialfront) + 1
@@ -53,7 +52,11 @@ while sw1 <= 5 :
     soup2 = BeautifulSoup(html2, 'lxml')
     linklists2 = soup2.find_all(href=re.compile(keytitle))
 
-    prelink2 = str(random.choice(linklists2))
+    try :
+        prelink2 = str(random.choice(linklists2))
+    except IndexError :
+        pass
+
     front2 = prelink2.find(titlefront) + 1
     rear2 = prelink2.rfind(titlerear)
     slicedlink2 = prelink2[front2:rear2]
@@ -71,7 +74,11 @@ while sw1 <= 5 :
     soup3 = BeautifulSoup(html3, 'lxml')
     linklists3 = soup3.find_all(href=re.compile(keyxhtml))
 
-    prelink3 = str(random.choice(linklists3))
+    try :
+        prelink3 = str(random.choice(linklists3))
+    except IndexError :
+        pass
+        
     front3 = prelink3.find(xhtmlfront) + 1
     rear3 = prelink3.rfind(xhtmlrear)
     slicedlink3 = prelink3[front3:rear3]
