@@ -41,7 +41,7 @@ while sw1 <= 5 :
 
     except ValueError :
         pass
-        
+
     front1 = prelink1.find(initialfront) + 1
     rear1 = prelink1.rfind(initialrear)
     slicedlink1 = prelink1[front1:rear1]
@@ -95,4 +95,5 @@ while sw1 <= 5 :
 
     #-------------ここまでは失敗することないよ
 
+    xhtml = None
     sw1 += 1
