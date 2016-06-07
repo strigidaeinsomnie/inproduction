@@ -36,7 +36,12 @@ while sw1 <= 5 :
     soup1 = BeautifulSoup(html1, 'lxml')
     linklists1 = soup1.find_all(href=re.compile(keyinitial))
 
-    prelink1 = str(random.choice(linklists1))
+    try :
+        prelink1 = str(random.choice(linklists1))
+
+    except ValueError :
+        pass
+        
     front1 = prelink1.find(initialfront) + 1
     rear1 = prelink1.rfind(initialrear)
     slicedlink1 = prelink1[front1:rear1]
