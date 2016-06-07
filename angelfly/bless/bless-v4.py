@@ -26,8 +26,8 @@ xhtmlfront = '/'
 xhtmlrear = '"'
 
 ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
-clear = '\r\r
-'
+clear = '\r\r'
+
 sw1 = 0
 
 #----------------------------------
