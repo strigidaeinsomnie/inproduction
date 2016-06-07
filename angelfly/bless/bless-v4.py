@@ -129,7 +129,7 @@ while sw1 <= 100 :
 
     while len(listwords) > 0 :
         chara = str(listwords[0])
-        listwords[1:]
+        listwords = listwords[1:]
 
         num = pattern2.findall(chara)
 
