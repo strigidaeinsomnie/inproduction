@@ -26,7 +26,8 @@ xhtmlfront = '/'
 xhtmlrear = '"'
 
 ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
-
+clear = '\r\r
+'
 sw1 = 0
 
 #----------------------------------
@@ -119,6 +120,31 @@ while sw1 <= 100 :
     print(sentence) #--ことばを一つ選ぶ
 
     #------------------------------
+
+    listnums = []
+    listwords = pattern1.findall(sentence.encode())
+
+    while len(listwords) > 0 :
+        chara = str(listwords[0])
+        listwords[1:]
+
+        num = pattern2.findall(chara)
+
+        while len(num) > 1 :
+            listnums.append(num[0])
+            num = num[1:]
+
+        num.append(0)
+        listnums.append(num[0])
+
+    for printnum in listnums :
+        forprint = str(printnum) + '\r'
+        ser.write(forprint.encode())
+
+    ser.write(sentence.encode())
+    ser.write(clear.encode())
+
+    #-----------------------------
 
     sw1 += 1
     time.sleep(5)
