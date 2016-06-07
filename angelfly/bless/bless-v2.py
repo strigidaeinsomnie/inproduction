@@ -27,7 +27,7 @@ xhtmlrear = '"'
 
 ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
 
-sw = 1
+sw1 = 1
 
 #----------------------------------
 
@@ -90,4 +90,4 @@ while sw1 == 1 :
 
     #-------------ここまでは失敗することないよ
 
-    sw = 0
+    sw1 = 0
