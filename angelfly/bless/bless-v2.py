@@ -32,6 +32,8 @@ sw1 = 0
 #----------------------------------
 
 while sw1 <= 5 :
+    xhtml = None
+
     html1 = urllib.request.urlopen(mother)
     soup1 = BeautifulSoup(html1, 'lxml')
     linklists1 = soup1.find_all(href=re.compile(keyinitial))
