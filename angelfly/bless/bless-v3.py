@@ -112,7 +112,7 @@ while sw1 <= 100 :
     print(text) #--ルビをとってかぎ括弧さがす
 
 #    try :
-    sentence = radom.choice(text)
+    sentence = random.choice(text)
 #    except IndexError :
 #        continue
 
