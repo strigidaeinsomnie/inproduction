@@ -39,7 +39,7 @@ while sw1 <= 5 :
     try :
         prelink1 = str(random.choice(linklists1))
     except IndexError :
-        pass
+        continue
 
     front1 = prelink1.find(initialfront) + 1
     rear1 = prelink1.rfind(initialrear)
@@ -55,7 +55,7 @@ while sw1 <= 5 :
     try :
         prelink2 = str(random.choice(linklists2))
     except IndexError :
-        pass
+        continue
 
     front2 = prelink2.find(titlefront) + 1
     rear2 = prelink2.rfind(titlerear)
@@ -77,7 +77,7 @@ while sw1 <= 5 :
     try :
         prelink3 = str(random.choice(linklists3))
     except IndexError :
-        pass
+        continue
 
     front3 = prelink3.find(xhtmlfront) + 1
     rear3 = prelink3.rfind(xhtmlrear)
