@@ -78,7 +78,7 @@ while sw1 <= 5 :
         prelink3 = str(random.choice(linklists3))
     except IndexError :
         pass
-        
+
     front3 = prelink3.find(xhtmlfront) + 1
     rear3 = prelink3.rfind(xhtmlrear)
     slicedlink3 = prelink3[front3:rear3]
@@ -102,5 +102,4 @@ while sw1 <= 5 :
 
     #-------------ここまでは失敗することないよ
 
-    xhtml = None
     sw1 += 1
