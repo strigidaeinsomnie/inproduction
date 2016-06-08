@@ -29,10 +29,12 @@ xhtmlrear = '"'
 pattern1 = re.compile(b'.')
 pattern2 = re.compile('[0-9]')
 
+lightstart = 10
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12, GPIO.OUT)
 light = GPIO.PWM(12, 50)  # channel=12 frequency=50Hz
-light.start(10)
+light.start(lightstart)
 
 ser = serial.Serial(port = '/dev/ttyAMA0', baudrate = 9600)
 clear = '\r\r'
@@ -153,6 +155,8 @@ while sw1 <= 100 :
         light.ChangeDutyCycle(numlight)
         print(numlight)
         time.sleep(waitlight)
+
+    light.ChangeDutyCycle(lightstart)
 
     ser.write(sentence.encode())
     ser.write(clear.encode())
