@@ -36,10 +36,10 @@ GPIO.setup(12, GPIO.OUT)
 light = GPIO.PWM(12, 50)  # channel=12 frequency=50Hz
 light.start(lightstart)
 
-ser = serial.Serial(port = '/dev/ttyAMA0', baudrate = 9600)
+ser = serial.Serial(port = '/dev/ttyS0', baudrate = 9600)
 clear = '\r\r'
 
-waitlight = 0.5
+waitlight = 0.3
 wait = 5
 sw1 = 0
 
