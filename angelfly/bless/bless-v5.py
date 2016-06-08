@@ -31,8 +31,8 @@ pattern2 = re.compile('[0-9]')
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12, GPIO.OUT)
-p = GPIO.PWM(12, 50)  # channel=12 frequency=50Hz
-p.start(10)
+light = GPIO.PWM(12, 50)  # channel=12 frequency=50Hz
+light.start(10)
 
 ser = serial.Serial(port = '/dev/ttyAMA0', baudrate = 9600)
 clear = '\r\r'
