@@ -3,8 +3,8 @@
 byte Can1[] = {
   0x18};
 
-// byte rev[] = {
-//   0x1B, 0x49, 0x31};
+byte rev[] = {
+  0x1B, 0x49, 0x31};
 
 String Letter = "";
 
@@ -90,7 +90,7 @@ char* rtrn[]=
 {
   "",
   "",
-  "\r"
+  "\r\r"
 };
 
 void setup()
@@ -102,7 +102,7 @@ void setup()
 
 void loop()
 {
-//  Serial.write(rev, 3);
+  Serial.write(rev, 3);
 
   Serial.print("\r");
 
@@ -112,5 +112,5 @@ void loop()
 
   Serial.print("\r");
 
-  delay(1000);  // 1sec
+  delay(10000);  // 10sec
 }
