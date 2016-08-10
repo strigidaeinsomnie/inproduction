@@ -8,7 +8,10 @@ RUN apt-get update && \
 
 #for python
     python3 python3-dev python3-pip \
-    libxml2-dev libxslt1-dev zlib1g-dev && \
+    libxml2-dev libxslt1-dev zlib1g-dev \
+
+#for pyaudio
+    portaudio19-dev && \
 
 #install wiringPi
     git clone git://git.drogon.net/wiringPi && \
@@ -18,4 +21,7 @@ RUN apt-get update && \
 #pip
     pip3 install wiringpi2 \
     pyserial RPi.GPIO \
-    nltk BeautifulSoup4 lxml
+    nltk BeautifulSoup4 lxml \
+    pyaudio mmap && \
+
+    cd && mkdir pulsenative
