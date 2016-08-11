@@ -13,4 +13,7 @@ RUN apt-get update && \
     alsa-base alsa-utils \
 
 #for pyaudio
-    portaudio19-dev
+    portaudio19-dev && \
+
+#pip
+    pip3 install pyaudio
