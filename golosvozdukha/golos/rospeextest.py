@@ -29,7 +29,7 @@ if __name__=='__main__':
 
     tts_command = { "method":"speak",
     "params":["1.1",
-    {"language":"ja","text":message,"voiceType":"F128","audioType":"audio/x-wav"}]}
+    {"language":"ja","text":message,"voiceType":"F117","audioType":"audio/x-wav"}]}
 
     obj_command = json.dumps(tts_command)     # string to json object
     obj_command = obj_command.encode('utf-8')
