@@ -16,4 +16,4 @@ RUN apt-get update && \
     portaudio19-dev && \
 
 #pip
-    pip3 install pyaudio
+    pip3 install pyaudio github3.py
