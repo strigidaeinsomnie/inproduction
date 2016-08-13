@@ -18,7 +18,7 @@ branch = repo.branch("master")
 tree = branch.commit.commit.tree.recurse()
 print(len(tree.tree))
 
-filename = tree.tree[1]
+filename = tree.tree[0]
 print(filename.path)
 
 blob = repo.blob(filename._json_data['sha'])
