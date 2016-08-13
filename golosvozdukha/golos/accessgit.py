@@ -21,6 +21,6 @@ filename = tree.tree[6]
 blob = repo.blob(filename._json_data['sha'])
 
 config_json = blob.content
-config        = json.loads(base64.b64decode(config_json))
+config = base64.b64decode(config_json)
 text = config.decode('utf-8')
 print(text)
