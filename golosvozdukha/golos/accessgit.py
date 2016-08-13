@@ -7,7 +7,7 @@ from github3 import login
 
 username = 'strigidaeinsomnie'
 password = 'inrpdlf13'
-repositoryname = 'poezya'
+repositoryname = 'poeziya'
 
 #------------------------------------------
 
