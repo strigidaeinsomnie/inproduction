@@ -16,7 +16,10 @@ repo = gh.repository(username, repositoryname)
 branch = repo.branch("master")
 
 tree = branch.commit.commit.tree.recurse()
-filename = tree.tree[6]
+print(len(tree.tree))
+
+filename = tree.tree[1]
+print(filename.path)
 
 blob = repo.blob(filename._json_data['sha'])
 
