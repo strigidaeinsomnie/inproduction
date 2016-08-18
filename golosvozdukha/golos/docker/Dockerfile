@@ -17,3 +17,8 @@ RUN apt-get update && \
 
 #pip
     pip3 install pyaudio github3.py
+
+RUN echo 'i2c-bcm2708' >> /etc/modules && \
+    echo 'i2c-dev' >> /etc/modules && \
+
+    apt-get install -y i2c-tools python-smbus
