@@ -18,7 +18,7 @@ RUN apt update && \
     alsa-base alsa-utils \
 
 #for pyaudio
-    portaudio19-dev
+    portaudio19-dev \
 
 #for i2c
     i2c-tools python3-smbus && \
