@@ -9,7 +9,7 @@ RUN echo 'i2c-bcm2708' >> /etc/modules && \
 RUN apt update && \
 
 #for build
-    apt install -y build-essential gcc git \
+    apt install -y build-essential gcc nano git \
 
 #for python
     python3 python3-dev python3-pip \
