@@ -1,10 +1,15 @@
 FROM resin/rpi-raspbian:jessie
 MAINTAINER Strigidaeinsomnie
 
-RUN apt-get update && \
+
+#for i2c
+RUN echo 'i2c-bcm2708' >> /etc/modules && \
+    echo 'i2c-dev' >> /etc/modules
+
+RUN apt update && \
 
 #for build
-    apt-get install -y build-essential gcc git \
+    apt install -y build-essential gcc git \
 
 #for python
     python3 python3-dev python3-pip \
@@ -13,12 +18,10 @@ RUN apt-get update && \
     alsa-base alsa-utils \
 
 #for pyaudio
-    portaudio19-dev && \
+    portaudio19-dev
+
+#for i2c
+    i2c-tools python3-smbus && \
 
 #pip
     pip3 install pyaudio github3.py
-
-RUN echo 'i2c-bcm2708' >> /etc/modules && \
-    echo 'i2c-dev' >> /etc/modules && \
-
-    apt-get install -y i2c-tools python-smbus
